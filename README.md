@@ -102,10 +102,6 @@ Exemplo de requisição para criar um empréstimo:
 POST http://localhost:8080/api/emprestimos?livroId=1&nomeUsuario=João
 ```
 
-Exemplo de requisição para criar um empréstimo:
-```http
-POST http://localhost:8080/api/emprestimos?livroId=1&nomeUsuario=João
-```
 ## 🔮 Melhorias Futuras
 
 - Implementar entidade `Usuario` com relacionamento JPA.
