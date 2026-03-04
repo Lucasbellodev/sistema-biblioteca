@@ -1,0 +1,466 @@
+{
+  "info": {
+    "_postman_id": "8949851f-9779-4010-b2da-5a9d9843f98c",
+    "name": "sistema-biblioteca",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "41996729"
+  },
+  "item": [
+    {
+      "name": "Emprestimos",
+      "item": [
+        {
+          "name": "Renovar emprestimo",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/emprestimos/2/renovar",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "emprestimos",
+                "2",
+                "renovar"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Criar emprestimo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/emprestimos?livroId=2&nomeUsuario=João",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "emprestimos"
+              ],
+              "query": [
+                {
+                  "key": "livroId",
+                  "value": "2"
+                },
+                {
+                  "key": "nomeUsuario",
+                  "value": "João"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar todos os emprestimos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/emprestimos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "emprestimos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar emprestimos ativos",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/emprestimos/ativos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "emprestimos",
+                "ativos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar emprestimos atrasados",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/emprestimos/atrasados",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "emprestimos",
+                "atrasados"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar emprestimo por periodo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/emprestimos/periodo?inicio=2026-02-17&fim=2026-02-19",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "emprestimos",
+                "periodo"
+              ],
+              "query": [
+                {
+                  "key": "inicio",
+                  "value": "2026-02-17"
+                },
+                {
+                  "key": "fim",
+                  "value": "2026-02-19",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar emprestimos por id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/emprestimos/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "emprestimos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar emprestimo por usuario",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/emprestimos/buscar/usuario?nomeUsuario=João",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "emprestimos",
+                "buscar",
+                "usuario"
+              ],
+              "query": [
+                {
+                  "key": "nomeUsuario",
+                  "value": "João",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar emprestimo por livros",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/emprestimos/buscar/livro?livroId=1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "emprestimos",
+                "buscar",
+                "livro"
+              ],
+              "query": [
+                {
+                  "key": "livroId",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Calcular multa",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/emprestimos/1/multa",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "emprestimos",
+                "1",
+                "multa"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Verificar disponibilidade do livro",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/emprestimos/disponibilidade?livroId=3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "emprestimos",
+                "disponibilidade"
+              ],
+              "query": [
+                {
+                  "key": "livroId",
+                  "value": "3",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Livros",
+      "item": [
+        {
+          "name": "Criar livro",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titulo\": \"Chico Bento\",\r\n    \"autor\": \"Autor do Chico\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/livros",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "livros"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Devolver livro",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/emprestimos/1/devolver",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "emprestimos",
+                "1",
+                "devolver"
+              ],
+              "query": [
+                {
+                  "key": "devolverLivro",
+                  "value": null,
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Atualizar livro existente",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titulo\": \"Chico Bentinho\",\r\n    \"autor\": \"Autorzinho do chico\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/livros/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "livros",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deletar livro existente",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/livros/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "livros",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar todos os livros",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/livros",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "livros"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar livro por id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/livros/3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "livros",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar livros disponiveis",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
